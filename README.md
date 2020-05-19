@@ -31,8 +31,8 @@ Things you may want to cover:
 Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique: :true, index: :true|
-|e-mail|string|null: false,unique: true, index: :true|
+|name|string|null: false, unique: true, index: true|
+|e-mail|string|null: false,unique: true, index: true|
 
 ### Association
 - has_many :messages
