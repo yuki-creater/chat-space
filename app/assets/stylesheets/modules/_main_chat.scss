@@ -4,103 +4,98 @@
 .wrapper{
   display: flex;
 }
-  .chat{
-    height: 100vh;
-    background-color: #ffffff;
-    width: calc(100vw - 300px);
-  }
-    .right-header{
-      height: 100px;
-      padding: 0 40px;
-      border-bottom: solid 1px #eee;
-      display: flex;
-      justify-content: space-between;
-      &__group{
-        padding: 0;
-        margin: 0;
-        &__name{
-          color: #333;
-          font-size: 20px;
-          margin-top: 35px;
-          &__memberlist{
-            color: #999;
-            display: flex;
-            font-size: 12px;
-            margin-top: 15px;
-            &__member{
-              margin: 0;
-              padding: 0;
-              font-size: 13px;
-            }
+.chat{
+  height: 100vh;
+  background-color: #ffffff;
+  width: calc(100vw - 300px);
+  .right-header{
+    height: 100px;
+    padding: 0 40px;
+    border-bottom: solid 1px #eee;
+    display: flex;
+    justify-content: space-between;
+    &__group{
+      padding: 0;
+      margin: 0;
+      &__name{
+        color: #333;
+        font-size: 20px;
+        margin-top: 35px;
+        &__memberlist{
+          color: #999;
+          display: flex;
+          font-size: 12px;
+          margin-top: 15px;
+          &__member{
+            margin: 0;
+            padding: 0;
+            font-size: 13px;
           }
         }
       }
     }
-      .edit-button{
-        display: block;
-        border: 1px solid #38aef0;
-        color:#38aef0;
-        height: 40px;
-        line-height: 40px;
-        margin-top: 28px;
-        padding: 0 20px;
-        text-decoration: none;
-        font-size: 16px;
-      }
-    .message-field{
-      background-color: #fafafa;
-      box-sizing: border-box;
-      padding: 35px 40px 0;
-      height: calc(100vh - 100px - 90px);
-      overflow: scroll;
-      &__box{
-        margin-bottom: 46px;
-        &__info{
-          display: flex;
-        }
-      }
+    &__edit-button{
+      display: block;
+      border: 1px solid #38aef0;
+      color:#38aef0;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 28px;
+      padding: 0 20px;
+      text-decoration: none;
+      font-size: 16px;
     }
-      .username{
-        color: #434a54;
-        font-size: 16px;
-        font-weight: bold;
-      }
-      .date{
+  }
+  .message-field{
+    background-color: #fafafa;
+    box-sizing: border-box;
+    padding: 35px 40px 0;
+    height: calc(100vh - 100px - 90px);
+    overflow: scroll;
+    &__box{
+      margin-bottom: 46px;
+      &__info{
+        display: flex;
+        &__user-name{
+          color: #434a54;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__date{
         color: #999;
         font-size: 12px;
         padding-left: 10px;
-      }
-      .message{
-        margin-top: 12px;
-        &__content{
-          color: #434a54;
-          font-size: 14px;
         }
       }
-    .footer{
-      height: 90px;
-      background-color: #d2d2d2;
-      width: calc(100vw - 300px);
-      padding: 20px 50px 20px 40px;
-      &__form{
-        width: 100%;
-        display: flex;
-        &__inputcontent{
+      &__message{
+          margin-top: 12px;
           display: flex;
-          border: none;
-          width: 100%;
-          border:none;
-          background-color: #ffffff;
-          position: relative;
-        }
+          &__content{
+            color: #434a54;
+            font-size: 14px;
+          }
       }
     }
-        .text{
-          height:50px;
-          width:100%;
-          padding-left:10px;
+  }
+  .footer{
+    height: 90px;
+    background-color: #d2d2d2;
+    width: calc(100vw - 300px);
+    padding: 20px 50px 20px 40px;
+    &__form{
+      width: 100%;
+      background-color: #fff;
+      display: flex;
+      &__input{
+        width: 100%;
+        position: relative;
+        &__content{
+          border: none;
+          height: 50px;
+          width: 100%;
+          padding: 0 45px 0 15px;
         }
-        .image{
+        &__image{
           position: absolute;
           top: 10px;
           right: 10px;
@@ -110,11 +105,15 @@
             display: none;
           }
         }
-        .send{
-          background-color: #38AEF0;
-          color: #fff;
-          font-size: 16px;
-          height: 50px;
-          margin-left: 15px;
-          padding: 0 30px;
-        }
+      }
+      &__send{
+        background-color: #38AEF0;
+        color: #fff;
+        font-size: 16px;
+        height: 50px;
+        margin-left: 15px;
+        padding: 0 30px;
+      }
+    }
+  }
+}
