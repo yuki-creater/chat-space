@@ -1,0 +1,26 @@
+.chat
+  .right-header
+    .right-header__group
+      .right-header__group__name
+        yukikun
+      .right-header__group__name__memberlist
+        Member:
+        .right-header__group__name__memberlist__member
+        yuki
+    .right-header__edit-button 
+      Edit
+  .message-field
+    .message-field__box
+      .message-field__box__info
+        .message-field__box__info__user-name yuki5
+        .message-field__box__info__date  2020年05月31日 23時59分
+      .message-field__box__message
+        .message-field__box__message__content 最高
+  .footer
+    .footer__form
+      .footer__form__input
+        %input{ name: "massage", placeholder: "type a message",type: "text",class: "footer__form__input__content" }
+        %label{ class: "footer__form__input__image" }
+          = icon('far', 'image')
+          %input{ class:"image__file", type: "file", name: "file",class:"footer__form__input__image__file"}
+      %input{ type: "submit", value: "Send", class: "footer__form__send"}
