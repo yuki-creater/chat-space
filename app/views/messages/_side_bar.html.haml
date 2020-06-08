@@ -1,16 +1,17 @@
 .side-bar
   .side-bar__top
     .side-bar__top__box
-      .side-bar__top__box__name yuki
-      .side-bar__top__box__menu
-        =icon('far', 'edit', class: 'sidebar__top__box__menu__edit')
-        =icon('fas', 'cog', class: 'sidebar__top__box__menu__cog')
+      .side-bar__top__box__name 
+        = current_user.name
+        .side-bar__top__box__menu
+      = link_to '#' do
+        =icon('far', 'edit', class: 'sidebar__top__box__menu__edit') 
+      = link_to edit_user_path(current_user) do
+        =icon('fas', 'cog', class: 'sidebar__top__box__menu__cog') 
   .side-bar__groups
     .side-bar__groups__group
       .side-bar__groups__group__name
         yukikun
-        .side-bar__groups__group__name__massage  
-          こんにちは
-
+        .side-bar__groups__group__name__massage 
 
 
