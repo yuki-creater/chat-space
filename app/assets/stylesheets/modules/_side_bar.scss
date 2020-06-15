@@ -23,22 +23,24 @@
         &__menu {
           display: flex;
           justify-content: end;
-          &__edit {
-            -webkit-font-smoothing: antialiased;
-            display: inline-block;
-            font-style: normal;
-            font-variant: normal;
-            text-rendering: auto;
-            line-height: 1;
-            &__cog {
-              -webkit-font-smoothing: antialiased;
-              display: inline-block;
-              font-style: normal;
-              font-variant: normal;
-              text-rendering: auto;
-              line-height: 1; 
-            }
-          }
+        }
+        &__edit {
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        color:  #ffffff;
+        }
+        &__cog {
+          -webkit-font-smoothing: antialiased;
+          display: inline-block;
+          font-style: normal;
+          font-variant: normal;
+          text-rendering: auto;
+          line-height: 1; 
+          color:  #ffffff;
         }
       }
     }
@@ -51,13 +53,16 @@
     &__group {
       box-sizing: border-box;
       padding: 20px 0 40px;
+      color: #ffffff;
       &__name {
         font-size: 15px;
-        &__massage {
-          font-size: 11px;
-          margin-top: 5px;
-        }
-      } 
+        color: #ffffff;
+      }
+      &__message {
+        font-size: 11px;
+        margin-top: 5px;
+        color: #ffffff;
+      }
     } 
   } 
-}
+} 

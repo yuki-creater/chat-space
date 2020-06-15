@@ -3,15 +3,17 @@
     .side-bar__top__box
       .side-bar__top__box__name 
         = current_user.name
-        .side-bar__top__box__menu
-      = link_to '#' do
-        =icon('far', 'edit', class: 'sidebar__top__box__menu__edit') 
+        .side-bar__top__box__name__menu
+      = link_to new_group_path do
+        = icon('far', 'edit', class: 'side-bar__top__box__name__edit') 
       = link_to edit_user_path(current_user) do
-        =icon('fas', 'cog', class: 'sidebar__top__box__menu__cog') 
+        = icon('fas', 'cog', class: 'side-bar__top__box__name__cog') 
   .side-bar__groups
-    .side-bar__groups__group
-      .side-bar__groups__group__name
-        yukikun
-        .side-bar__groups__group__name__massage 
-
-
+    - current_user.groups.each do |group|
+      .side-bar__groups__group
+      = link_to group_messages_path(group) do
+        .side-bar__groups__group__name
+          = group.name
+          yukikun
+        .side-bar__groups__group__message
+          
