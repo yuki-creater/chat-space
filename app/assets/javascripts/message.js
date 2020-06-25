@@ -55,14 +55,13 @@ $(function(){
       let html = buildHTML(data);
       $('.message-field').append(html);      
       $('.footer__form')[0].reset();
-      $('.footer__form__box__send').prop( 'disabled', false );
-      $('.message-field').animate({ scrollTop: $('.message-field')[0].scrollHeight});
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
   })
     .always(function() {
       $('.footer__form__box__send').prop( 'disabled', false );
+      $('.message-field').animate({ scrollTop: $('.message-field')[0].scrollHeight});
     })
   });
 });
