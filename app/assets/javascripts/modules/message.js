@@ -2,9 +2,9 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-        `<div class="message-field__box">
+        `<div class="message-field__box"data-message-id=${message.id} >
           <div class="message-field__box__info">
-            <div message-field__box__info__user-name>
+            <div "message-field__box__info__user-name">
               ${message.user_name}
             </div>
             <div class="message-field__box__info__date">
@@ -21,7 +21,7 @@ $(function(){
       return html;
     } else {
       let html =
-      `<div class="message-field__box">
+      `<div class="message-field__box" data-message-id=${message.id}>
         <div class="message-field__box__info">
           <div class="message-field__box__info__user-name">
             ${message.user_name}
@@ -43,6 +43,7 @@ $(function(){
     e.preventDefault()
     let formData = new FormData(this);
     let url = $(this).attr('action');
+    console.log(url)
     $.ajax({
       url: url,
       type: "POST",
@@ -52,16 +53,16 @@ $(function(){
       contentType: false
     })
     .done(function(data){
+      // console.log(data)
       let html = buildHTML(data);
       $('.message-field').append(html);      
+      $('form')[0].reset();
       $('.message-field').animate({ scrollTop: $('.message-field')[0].scrollHeight});
+      $('.footer__form__box__send').prop("disabled", false);
     })
     .fail(function() {
-      alert("メッセージ送信に失敗しました");
-  })
-    .always(function() {
-      $('.footer__form__box__send').prop( 'disabled', false );
-      $('.footer__form')[0].reset();
-    })
+      alert('メッセージ送信に失敗しました');
+      $('.footer__form__box__send').prop("disabled", false);
+    });
   });
-});
+})
