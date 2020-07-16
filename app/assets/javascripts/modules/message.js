@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-        `<div class="message-field__box">
+        `<div class="message-field__box" data-message-id=${message.id}>
           <div class="message-field__box__info">
             <div message-field__box__info__user-name>
               ${message.user_name}
@@ -21,7 +21,7 @@ $(function(){
       return html;
     } else {
       let html =
-      `<div class="message-field__box">
+      `<div class="message-field__box" data-message-id=${message.id} >
         <div class="message-field__box__info">
           <div class="message-field__box__info__user-name">
             ${message.user_name}
@@ -53,7 +53,7 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      $('.message-field').append(html);      
+      $('.message-field').append(html);    
       $('.message-field').animate({ scrollTop: $('.message-field')[0].scrollHeight});
     })
     .fail(function() {
