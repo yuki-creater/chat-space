@@ -9,8 +9,7 @@
         .right-header__group__name__memberlist__member
         - @group.users.each do |group|
           = group.name
-    .right-header__edit
-      = link_to 'Edit', edit_group_path(@group), class:"right-header__edit__button"
+    = link_to 'Edit', edit_group_path(@group), class:"right-header__edit"
       
   .message-field
     = render @messages
